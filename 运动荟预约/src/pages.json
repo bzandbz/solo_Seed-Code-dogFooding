@@ -1,0 +1,66 @@
+{
+	"pages": [
+		{
+			"path": "pages/home/index",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		},
+		{
+			"path": "pages/venue-list/index",
+			"style": {
+				"navigationBarTitleText": "场馆列表"
+			}
+		},
+		{
+			"path": "pages/my-bookings/index",
+			"style": {
+				"navigationBarTitleText": "我的预约"
+			}
+		},
+		{
+			"path": "pages/venue-detail/index",
+			"style": {
+				"navigationBarTitleText": "场馆详情"
+			}
+		},
+		{
+			"path": "pages/booking-detail/index",
+			"style": {
+				"navigationBarTitleText": "预约详情"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "运动荟预约",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#999999",
+		"selectedColor": "#1890FF",
+		"backgroundColor": "#FFFFFF",
+		"borderStyle": "black",
+		"list": [
+			{
+				"pagePath": "pages/home/index",
+				"text": "首页",
+				"iconPath": "static/tabbar/home.png",
+				"selectedIconPath": "static/tabbar/home-active.png"
+			},
+			{
+				"pagePath": "pages/venue-list/index",
+				"text": "场馆列表",
+				"iconPath": "static/tabbar/list.png",
+				"selectedIconPath": "static/tabbar/list-active.png"
+			},
+			{
+				"pagePath": "pages/my-bookings/index",
+				"text": "我的预约",
+				"iconPath": "static/tabbar/person.png",
+				"selectedIconPath": "static/tabbar/person-active.png"
+			}
+		]
+	}
+}
