@@ -5,16 +5,18 @@
         v-for="venue in filteredVenues"
         :key="venue.id"
         class="venue-card"
-        @click="goToDetail(venue.id)"
       >
-        <image class="venue-image" :src="venue.image" mode="aspectFill" />
-        <view class="venue-info">
+        <image class="venue-image" :src="venue.image" mode="aspectFill" @click="goToDetail(venue.id)" />
+        <view class="venue-info" @click="goToDetail(venue.id)">
           <text class="venue-name">{{ venue.name }}</text>
           <view class="venue-price-row">
             <text class="venue-price">¥{{ venue.price }}</text>
             <text class="price-unit">/小时</text>
           </view>
           <text class="venue-distance">{{ venue.distance }}</text>
+        </view>
+        <view class="favorite-btn" @click.stop="toggleFavorite(venue.id)">
+          <text class="favorite-icon" :class="{ active: isVenueFavorited(venue.id) }">❤️</text>
         </view>
       </view>
     </view>
@@ -26,6 +28,7 @@ import { ref, computed } from 'vue'
 import { onLoad, onShow } from '@dcloudio/uni-app'
 import venuesData from '@/static/data/venues.js'
 import categoriesData from '@/static/data/categories.js'
+import favoritesData from '@/static/data/favorites.js'
 
 interface Venue {
   id: string
@@ -46,8 +49,15 @@ interface Category {
   icon: string
 }
 
+interface Favorite {
+  id: string
+  venueId: string
+  createTime: string
+}
+
 const venues = venuesData as Venue[]
 const categories = categoriesData as Category[]
+const favorites = ref<Favorite[]>(favoritesData as Favorite[])
 
 const routeType = ref<string | null>(null)
 
@@ -102,6 +112,42 @@ const goToDetail = (id: string) => {
     url: `/pages/venue-detail/index?id=${id}`
   })
 }
+
+const isVenueFavorited = (venueId: string): boolean => {
+  return favorites.value.some(f => f.venueId === venueId)
+}
+
+const toggleFavorite = (venueId: string) => {
+  const index = favorites.value.findIndex(f => f.venueId === venueId)
+  
+  if (index !== -1) {
+    favorites.value.splice(index, 1)
+    uni.showToast({
+      title: '已取消收藏',
+      icon: 'none'
+    })
+  } else {
+    const newFavorite: Favorite = {
+      id: `favorite_${Date.now()}`,
+      venueId: venueId,
+      createTime: formatDate(new Date())
+    }
+    favorites.value.unshift(newFavorite)
+    uni.showToast({
+      title: '收藏成功',
+      icon: 'success'
+    })
+  }
+}
+
+const formatDate = (date: Date): string => {
+  const year = date.getFullYear()
+  const month = String(date.getMonth() + 1).padStart(2, '0')
+  const day = String(date.getDate()).padStart(2, '0')
+  const hour = String(date.getHours()).padStart(2, '0')
+  const minute = String(date.getMinutes()).padStart(2, '0')
+  return `${year}-${month}-${day} ${hour}:${minute}`
+}
 </script>
 
 <style scoped>
@@ -125,6 +171,7 @@ const goToDetail = (id: string) => {
   box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.08);
   overflow: hidden;
   padding: 20rpx;
+  align-items: center;
 }
 
 .venue-image {
@@ -140,6 +187,22 @@ const goToDetail = (id: string) => {
   margin-left: 24rpx;
   flex: 1;
   justify-content: space-between;
+}
+
+.favorite-btn {
+  padding: 16rpx;
+  flex-shrink: 0;
+}
+
+.favorite-icon {
+  font-size: 36rpx;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.favorite-icon.active {
+  opacity: 1;
+  color: #ff4d4f;
 }
 
 .venue-name {

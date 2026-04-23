@@ -13,6 +13,12 @@
 			}
 		},
 		{
+			"path": "pages/favorites/index",
+			"style": {
+				"navigationBarTitleText": "我的收藏"
+			}
+		},
+		{
 			"path": "pages/my-bookings/index",
 			"style": {
 				"navigationBarTitleText": "我的预约"
@@ -28,6 +34,12 @@
 			"path": "pages/booking-detail/index",
 			"style": {
 				"navigationBarTitleText": "预约详情"
+			}
+		},
+		{
+			"path": "pages/reviews-list/index",
+			"style": {
+				"navigationBarTitleText": "评价列表"
 			}
 		}
 	],
@@ -52,6 +64,12 @@
 			{
 				"pagePath": "pages/venue-list/index",
 				"text": "场馆列表",
+				"iconPath": "static/tabbar/list.png",
+				"selectedIconPath": "static/tabbar/list-active.png"
+			},
+			{
+				"pagePath": "pages/favorites/index",
+				"text": "我的收藏",
 				"iconPath": "static/tabbar/list.png",
 				"selectedIconPath": "static/tabbar/list-active.png"
 			},
