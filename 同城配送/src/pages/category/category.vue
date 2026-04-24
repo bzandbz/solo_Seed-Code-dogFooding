@@ -71,6 +71,7 @@
 
 <script>
 import { categories, categoryProducts } from '@/static/data/mockData.js'
+import cartUtils from '@/utils/cart.js'
 
 export default {
   data() {
@@ -91,6 +92,13 @@ export default {
   onLoad() {
     console.log('分类页加载')
   },
+  onShow() {
+    const targetCategoryId = uni.getStorageSync('targetCategoryId')
+    if (targetCategoryId) {
+      this.activeCategoryId = targetCategoryId
+      uni.removeStorageSync('targetCategoryId')
+    }
+  },
   methods: {
     selectCategory(categoryId) {
       this.activeCategoryId = categoryId
@@ -110,6 +118,7 @@ export default {
       })
     },
     addCart(item) {
+      cartUtils.addToCart(item)
       uni.showToast({
         title: '已加入购物车',
         icon: 'success'
@@ -296,12 +305,19 @@ export default {
   align-items: center;
   justify-content: center;
   box-shadow: 0 4rpx 8rpx rgba(255, 77, 79, 0.3);
+  transition: all 0.2s ease;
+}
+
+.add-cart-btn:active {
+  transform: scale(0.9);
+  box-shadow: 0 2rpx 4rpx rgba(255, 77, 79, 0.3);
 }
 
 .add-icon {
   font-size: 40rpx;
   color: #FFFFFF;
   line-height: 1;
+  font-weight: bold;
 }
 
 .bottom-placeholder {

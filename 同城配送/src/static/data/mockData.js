@@ -156,6 +156,150 @@ export const hotProducts = [
     image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=fresh%20strawberries%20in%20white%20bowl%20product%20photo&image_size=square',
     sales: 1234,
     discount: '限时特惠'
+  },
+  {
+    id: 9,
+    name: '王老吉凉茶 310ml*12罐',
+    price: 45.9,
+    originalPrice: 59.9,
+    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=wanglaoji%20herbal%20tea%20cans%20product&image_size=square',
+    sales: 3456,
+    discount: '爆款热销'
+  },
+  {
+    id: 10,
+    name: '奥利奥巧轻脆 95g',
+    price: 10.9,
+    originalPrice: 15.9,
+    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=oreo%20thin%20biscuit%20pack%20product&image_size=square',
+    sales: 2345,
+    discount: '限时特惠'
+  },
+  {
+    id: 11,
+    name: '统一冰红茶 500ml*15瓶',
+    price: 29.9,
+    originalPrice: 39.9,
+    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=unification%20ice%20tea%20bottles%20pack&image_size=square',
+    sales: 4567,
+    discount: '爆款热销'
+  },
+  {
+    id: 12,
+    name: '金龙鱼黄金比例 调和油 5L',
+    price: 79.9,
+    originalPrice: 99.9,
+    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=golden%20dragon%20fish%20cooking%20oil%20bottle&image_size=square',
+    sales: 876,
+    discount: '新人专享'
+  },
+  {
+    id: 13,
+    name: '农夫山泉天然水 550ml*24瓶',
+    price: 35.9,
+    originalPrice: 45.9,
+    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=nongfu%20spring%20mineral%20water%20bottles&image_size=square',
+    sales: 6789,
+    discount: '爆款热销'
+  },
+  {
+    id: 14,
+    name: '好丽友蛋黄派 12枚装',
+    price: 19.9,
+    originalPrice: 25.9,
+    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=orion%20egg%20yolk%20pie%20pack%20product&image_size=square',
+    sales: 3456,
+    discount: '限时特惠'
+  },
+  {
+    id: 15,
+    name: '绿箭口香糖 5片装*10条',
+    price: 12.9,
+    originalPrice: 18.9,
+    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=green%20arrow%20chewing%20gum%20packs&image_size=square',
+    sales: 8901,
+    discount: '爆款热销'
+  },
+  {
+    id: 16,
+    name: '金龙鱼盘锦大米 5kg',
+    price: 49.9,
+    originalPrice: 69.9,
+    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=panjin%20rice%20bag%20packaging%20product&image_size=square',
+    sales: 2345,
+    discount: '新人专享'
+  },
+  {
+    id: 17,
+    name: '德芙丝滑牛奶巧克力 252g',
+    price: 39.9,
+    originalPrice: 59.9,
+    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=dove%20silk%20milk%20chocolate%20bowl&image_size=square',
+    sales: 4567,
+    discount: '限时特惠'
+  },
+  {
+    id: 18,
+    name: '旺旺雪饼 520g',
+    price: 29.9,
+    originalPrice: 39.9,
+    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=wangwang%20snow%20cracker%20pack%20product&image_size=square',
+    sales: 5678,
+    discount: '爆款热销'
+  },
+  {
+    id: 19,
+    name: '康师傅红烧牛肉面 12桶装',
+    price: 45.9,
+    originalPrice: 59.9,
+    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=kangshifu%20beef%20noodles%2012%20cups&image_size=square',
+    sales: 7890,
+    discount: '爆款热销'
+  },
+  {
+    id: 20,
+    name: '养乐多活性乳酸菌 100ml*5瓶',
+    price: 12.9,
+    originalPrice: 15.9,
+    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=yakult%20lactic%20acid%20bacteria%20bottles&image_size=square',
+    sales: 9012,
+    discount: '限时特惠'
+  },
+  {
+    id: 21,
+    name: '徐福记沙琪玛 469g',
+    price: 19.9,
+    originalPrice: 29.9,
+    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=xufuji%20sachima%20pack%20product&image_size=square',
+    sales: 3456,
+    discount: '新人专享'
+  },
+  {
+    id: 22,
+    name: '脉动青柠口味 600ml*15瓶',
+    price: 49.9,
+    originalPrice: 69.9,
+    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=mizone%20lime%20flavor%20sports%20drink%20bottles&image_size=square',
+    sales: 4567,
+    discount: '爆款热销'
+  },
+  {
+    id: 23,
+    name: '立白全效馨香洗衣液 3kg',
+    price: 29.9,
+    originalPrice: 45.9,
+    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=liby%20laundry%20detergent%20bottle%20product&image_size=square',
+    sales: 6789,
+    discount: '限时特惠'
+  },
+  {
+    id: 24,
+    name: '维达抽纸 3层150抽*24包',
+    price: 59.9,
+    originalPrice: 79.9,
+    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=vinda%20tissue%20paper%20packs%20product&image_size=square',
+    sales: 12345,
+    discount: '爆款热销'
   }
 ]
 

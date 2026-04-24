@@ -17,6 +17,14 @@
             }
         },
         {
+            "path": "pages/cart/cart",
+            "style": {
+                "navigationBarTitleText": "购物车",
+                "navigationBarBackgroundColor": "#FF6B6B",
+                "navigationBarTextStyle": "white"
+            }
+        },
+        {
             "path": "pages/mine/mine",
             "style": {
                 "navigationBarTitleText": "个人中心",
@@ -44,6 +52,10 @@
             {
                 "pagePath": "pages/category/category",
                 "text": "分类"
+            },
+            {
+                "pagePath": "pages/cart/cart",
+                "text": "购物车"
             },
             {
                 "pagePath": "pages/mine/mine",
