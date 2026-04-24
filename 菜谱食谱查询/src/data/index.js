@@ -1,0 +1,494 @@
+// 轮播图数据
+export const bannerList = [
+    {
+        id: 1,
+        image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=精美中华美食展示%2C红烧肉%2C清蒸鱼%2C宫保鸡丁%2C色彩鲜艳%2C食欲满满%2C高清美食摄影&image_size=landscape_16_9',
+        title: '今日推荐：红烧肉',
+        link: '/pages/detail/detail?id=1'
+    },
+    {
+        id: 2,
+        image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=川菜美食展示%2C麻婆豆腐%2C水煮鱼%2C辣椒%2C麻辣鲜香%2C高清美食摄影&image_size=landscape_16_9',
+        title: '川菜精选',
+        link: '/pages/category/category?category=川菜'
+    },
+    {
+        id: 3,
+        image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=家常菜展示%2C西红柿炒蛋%2C酸辣土豆丝%2C简单美味%2C高清美食摄影&image_size=landscape_16_9',
+        title: '家常菜教程',
+        link: '/pages/category/category?category=家常菜'
+    },
+    {
+        id: 4,
+        image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=甜品展示%2C蛋糕%2C蛋挞%2C布丁%2C精美甜点%2C高清美食摄影&image_size=landscape_16_9',
+        title: '甜点制作',
+        link: '/pages/category/category?category=甜点'
+    }
+]
+
+// 热门菜系分类
+export const categoryList = [
+    {
+        id: 1,
+        name: '川菜',
+        icon: '🌶️',
+        key: 'chuancai',
+        color: '#FF6B6B'
+    },
+    {
+        id: 2,
+        name: '粤菜',
+        icon: '🍲',
+        key: 'yuecai',
+        color: '#4ECDC4'
+    },
+    {
+        id: 3,
+        name: '鲁菜',
+        icon: '🍗',
+        key: 'lucai',
+        color: '#FFE66D'
+    },
+    {
+        id: 4,
+        name: '苏菜',
+        icon: '🍜',
+        key: 'sucai',
+        color: '#FF9F1C'
+    },
+    {
+        id: 5,
+        name: '浙菜',
+        icon: '🦐',
+        key: 'zhecai',
+        color: '#2EC4B6'
+    },
+    {
+        id: 6,
+        name: '闽菜',
+        icon: '🍤',
+        key: 'mincai',
+        color: '#FF6B9D'
+    },
+    {
+        id: 7,
+        name: '湘菜',
+        icon: '🥘',
+        key: 'xiangcai',
+        color: '#E74C3C'
+    },
+    {
+        id: 8,
+        name: '徽菜',
+        icon: '🍖',
+        key: 'huicai',
+        color: '#8E44AD'
+    },
+    {
+        id: 9,
+        name: '家常菜',
+        icon: '🍳',
+        key: 'jiachang',
+        color: '#3498DB'
+    },
+    {
+        id: 10,
+        name: '甜点',
+        icon: '🍰',
+        key: 'tiandian',
+        color: '#F39C12'
+    },
+    {
+        id: 11,
+        name: '汤类',
+        icon: '🥣',
+        key: 'tanglei',
+        color: '#1ABC9C'
+    },
+    {
+        id: 12,
+        name: '主食',
+        icon: '🍚',
+        key: 'zhushi',
+        color: '#9B59B6'
+    }
+]
+
+// 分类标签（用于分类页）
+export const categoryTabs = [
+    { id: 0, name: '全部', key: 'all' },
+    { id: 1, name: '川菜', key: 'chuancai' },
+    { id: 2, name: '粤菜', key: 'yuecai' },
+    { id: 3, name: '鲁菜', key: 'lucai' },
+    { id: 4, name: '苏菜', key: 'sucai' },
+    { id: 5, name: '浙菜', key: 'zhecai' },
+    { id: 6, name: '家常菜', key: 'jiachang' },
+    { id: 7, name: '甜点', key: 'tiandian' }
+]
+
+// 菜谱数据
+export const recipeList = [
+    {
+        id: 1,
+        name: '红烧肉',
+        image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=经典红烧肉%2C色泽红亮%2C肥而不腻%2C入口即化%2C高清美食摄影%2C摆盘精美&image_size=square_hd',
+        category: 'chuancai',
+        categoryName: '川菜',
+        difficulty: '中等',
+        time: '60分钟',
+        author: '美食达人',
+        authorAvatar: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=厨师头像%2C专业厨师%2C微笑%2C高清头像&image_size=square_hd',
+        likes: 2345,
+        views: 15678,
+        collections: 890,
+        tags: ['家常菜', '下饭菜', '肉类'],
+        ingredients: ['五花肉 500g', '生抽 2勺', '老抽 1勺', '冰糖 30g', '料酒 2勺', '姜片 5片', '八角 2个', '桂皮 1小块'],
+        steps: [
+            { step: 1, desc: '五花肉切成3厘米见方的块，冷水下锅焯水，去除血沫后捞出洗净备用。', image: '' },
+            { step: 2, desc: '锅中放少许油，放入冰糖小火炒至焦糖色。', image: '' },
+            { step: 3, desc: '放入焯好的五花肉翻炒，让每一块肉都裹上糖色。', image: '' },
+            { step: 4, desc: '加入姜片、八角、桂皮，倒入料酒、生抽、老抽翻炒均匀。', image: '' },
+            { step: 5, desc: '加入没过肉的开水，大火烧开后转小火炖40分钟。', image: '' },
+            { step: 6, desc: '最后大火收汁，汤汁浓稠即可出锅。', image: '' }
+        ],
+        tips: '选择肥瘦相间的五花肉，炖的时间越长越入味。收汁时要不停翻动，防止糊底。',
+        isHot: true,
+        isRecommend: true
+    },
+    {
+        id: 2,
+        name: '宫保鸡丁',
+        image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=经典宫保鸡丁%2C花生酥脆%2C鸡肉嫩滑%2C麻辣鲜香%2C色泽诱人%2C高清美食摄影&image_size=square_hd',
+        category: 'chuancai',
+        categoryName: '川菜',
+        difficulty: '简单',
+        time: '25分钟',
+        author: '川菜大师',
+        authorAvatar: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=川菜厨师头像%2C专业%2C微笑%2C高清头像&image_size=square_hd',
+        likes: 1890,
+        views: 12345,
+        collections: 678,
+        tags: ['快手菜', '下饭菜', '鸡肉'],
+        ingredients: ['鸡胸肉 300g', '花生米 50g', '干辣椒 10个', '花椒 1勺', '葱姜蒜 适量', '生抽 2勺', '醋 1勺', '白糖 1勺', '淀粉 适量'],
+        steps: [
+            { step: 1, desc: '鸡胸肉切丁，加入盐、料酒、淀粉腌制15分钟。', image: '' },
+            { step: 2, desc: '花生米提前炸熟或炒熟备用。', image: '' },
+            { step: 3, desc: '调碗汁：生抽、醋、白糖、淀粉、少许水调匀。', image: '' },
+            { step: 4, desc: '锅中放油，油温五成热放入鸡丁滑炒至变色盛出。', image: '' },
+            { step: 5, desc: '锅中留底油，放入干辣椒、花椒爆香，加入葱姜蒜炒香。', image: '' },
+            { step: 6, desc: '放入鸡丁翻炒，倒入碗汁快速翻炒均匀。', image: '' },
+            { step: 7, desc: '最后加入花生米翻炒均匀即可出锅。', image: '' }
+        ],
+        tips: '鸡丁要提前腌制才会嫩滑。花生米要最后放，保持酥脆口感。',
+        isHot: true,
+        isRecommend: true
+    },
+    {
+        id: 3,
+        name: '麻婆豆腐',
+        image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=经典麻婆豆腐%2C麻辣鲜香%2C豆腐嫩滑%2C色泽红亮%2C撒上葱花%2C高清美食摄影&image_size=square_hd',
+        category: 'chuancai',
+        categoryName: '川菜',
+        difficulty: '简单',
+        time: '20分钟',
+        author: '川菜小厨',
+        authorAvatar: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=年轻厨师头像%2C专业%2C微笑%2C高清头像&image_size=square_hd',
+        likes: 2567,
+        views: 18900,
+        collections: 1234,
+        tags: ['家常菜', '下饭菜', '豆腐'],
+        ingredients: ['嫩豆腐 1块', '牛肉末 100g', '郫县豆瓣酱 2勺', '花椒粉 1勺', '蒜末 适量', '葱花 适量', '淀粉水 适量'],
+        steps: [
+            { step: 1, desc: '豆腐切成2厘米见方的块，开水焯烫2分钟捞出备用。', image: '' },
+            { step: 2, desc: '锅中放油，放入牛肉末炒至变色。', image: '' },
+            { step: 3, desc: '加入郫县豆瓣酱炒出红油，加入蒜末炒香。', image: '' },
+            { step: 4, desc: '加入适量清水，放入豆腐块轻轻推动，不要弄碎。', image: '' },
+            { step: 5, desc: '大火烧开后转中火炖5分钟，让豆腐入味。', image: '' },
+            { step: 6, desc: '淋入淀粉水勾芡，撒上花椒粉和葱花即可。', image: '' }
+        ],
+        tips: '豆腐焯水可以去除豆腥味，同时让豆腐更嫩滑。翻炒时动作要轻，防止豆腐碎掉。',
+        isHot: true,
+        isRecommend: false
+    },
+    {
+        id: 4,
+        name: '白切鸡',
+        image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=广东白切鸡%2C皮爽肉嫩%2C色泽金黄%2C搭配姜葱酱%2C摆盘精美%2C高清美食摄影&image_size=square_hd',
+        category: 'yuecai',
+        categoryName: '粤菜',
+        difficulty: '中等',
+        time: '45分钟',
+        author: '粤菜师傅',
+        authorAvatar: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=粤菜厨师头像%2C专业%2C微笑%2C高清头像&image_size=square_hd',
+        likes: 1456,
+        views: 9876,
+        collections: 567,
+        tags: ['粤菜', '清淡', '鸡肉'],
+        ingredients: ['三黄鸡 1只', '姜 50g', '葱 3根', '料酒 2勺', '盐 适量', '冰块 适量'],
+        steps: [
+            { step: 1, desc: '三黄鸡清洗干净，锅中放水，加入姜片、葱段、料酒。', image: '' },
+            { step: 2, desc: '水开后放入鸡，手提鸡头让鸡腔进水后提出，重复3次。', image: '' },
+            { step: 3, desc: '将鸡完全放入锅中，水开后转小火浸煮25分钟。', image: '' },
+            { step: 4, desc: '准备冰水，将煮好的鸡立即放入冰水中浸泡15分钟。', image: '' },
+            { step: 5, desc: '捞出沥干水分，斩块摆盘。', image: '' },
+            { step: 6, desc: '姜葱切末，加入盐、热油调成姜葱酱，搭配食用。', image: '' }
+        ],
+        tips: '选择三黄鸡，皮黄肉嫩。浸煮时要三起三落，让鸡腔内外温度均匀。冰水浸泡是皮爽的关键。',
+        isHot: false,
+        isRecommend: true
+    },
+    {
+        id: 5,
+        name: '清蒸鲈鱼',
+        image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=清蒸鲈鱼%2C鱼肉鲜嫩%2C色泽洁白%2C淋上热油%2C撒上葱丝%2C摆盘精美%2C高清美食摄影&image_size=square_hd',
+        category: 'yuecai',
+        categoryName: '粤菜',
+        difficulty: '简单',
+        time: '25分钟',
+        author: '海鲜大厨',
+        authorAvatar: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=海鲜厨师头像%2C专业%2C微笑%2C高清头像&image_size=square_hd',
+        likes: 2134,
+        views: 14567,
+        collections: 890,
+        tags: ['海鲜', '清淡', '快手菜'],
+        ingredients: ['鲈鱼 1条', '葱姜丝 适量', '蒸鱼豉油 3勺', '料酒 1勺', '盐 少许', '食用油 适量'],
+        steps: [
+            { step: 1, desc: '鲈鱼处理干净，在鱼身两面划几刀，抹上盐和料酒腌制10分钟。', image: '' },
+            { step: 2, desc: '盘中铺上姜片和葱段，将鱼放在上面，鱼身上也放一些葱姜丝。', image: '' },
+            { step: 3, desc: '水开后放入鱼，大火蒸8-10分钟。', image: '' },
+            { step: 4, desc: '蒸好后倒掉盘中的水，去掉蒸过的葱姜丝。', image: '' },
+            { step: 5, desc: '重新放上新鲜的葱姜丝，淋上蒸鱼豉油。', image: '' },
+            { step: 6, desc: '锅中烧热油，淋在葱姜丝上即可。', image: '' }
+        ],
+        tips: '鱼要新鲜，蒸的时间根据鱼的大小调整。倒掉蒸出的水是关键，可以去除腥味。',
+        isHot: true,
+        isRecommend: true
+    },
+    {
+        id: 6,
+        name: '西红柿炒蛋',
+        image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=西红柿炒蛋%2C经典家常菜%2C色泽鲜艳%2C酸甜可口%2C汤汁浓郁%2C高清美食摄影&image_size=square_hd',
+        category: 'jiachang',
+        categoryName: '家常菜',
+        difficulty: '简单',
+        time: '15分钟',
+        author: '家庭主妇',
+        authorAvatar: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=家庭主妇头像%2C亲切%2C微笑%2C高清头像&image_size=square_hd',
+        likes: 5678,
+        views: 45678,
+        collections: 3456,
+        tags: ['家常菜', '快手菜', '鸡蛋'],
+        ingredients: ['西红柿 2个', '鸡蛋 3个', '葱花 适量', '盐 适量', '白糖 1小勺', '食用油 适量'],
+        steps: [
+            { step: 1, desc: '西红柿切块，鸡蛋打散加少许盐。', image: '' },
+            { step: 2, desc: '锅中放油，油温七成热倒入蛋液，快速翻炒成块盛出。', image: '' },
+            { step: 3, desc: '锅中再放少许油，放入西红柿块翻炒。', image: '' },
+            { step: 4, desc: '西红柿出汁后加入少许白糖和盐调味。', image: '' },
+            { step: 5, desc: '倒入炒好的鸡蛋，翻炒均匀让鸡蛋裹上番茄汁。', image: '' },
+            { step: 6, desc: '撒上葱花即可出锅。', image: '' }
+        ],
+        tips: '西红柿要选择熟透的，更容易出汁。加少许白糖可以中和西红柿的酸味，让味道更鲜美。',
+        isHot: true,
+        isRecommend: true
+    },
+    {
+        id: 7,
+        name: '酸辣土豆丝',
+        image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=酸辣土豆丝%2C根根分明%2C酸辣开胃%2C色泽诱人%2C撒上葱花%2C高清美食摄影&image_size=square_hd',
+        category: 'jiachang',
+        categoryName: '家常菜',
+        difficulty: '简单',
+        time: '20分钟',
+        author: '家常菜达人',
+        authorAvatar: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=家常菜达人头像%2C亲切%2C微笑%2C高清头像&image_size=square_hd',
+        likes: 4321,
+        views: 34567,
+        collections: 2345,
+        tags: ['家常菜', '下饭菜', '素菜'],
+        ingredients: ['土豆 2个', '干辣椒 5个', '花椒 1小勺', '蒜末 适量', '葱花 适量', '醋 2勺', '盐 适量'],
+        steps: [
+            { step: 1, desc: '土豆去皮切成细丝，放入清水中浸泡去除淀粉。', image: '' },
+            { step: 2, desc: '锅中放水烧开，放入土豆丝焯水30秒，捞出过凉水沥干。', image: '' },
+            { step: 3, desc: '锅中放油，放入干辣椒和花椒爆香后捞出。', image: '' },
+            { step: 4, desc: '放入蒜末炒香，倒入土豆丝快速翻炒。', image: '' },
+            { step: 5, desc: '加入醋、盐调味，快速翻炒均匀。', image: '' },
+            { step: 6, desc: '撒上葱花即可出锅。', image: '' }
+        ],
+        tips: '土豆丝要切细切匀，泡水去淀粉才会脆。焯水时间不要太长，保持脆感。醋要最后放，挥发少。',
+        isHot: true,
+        isRecommend: true
+    },
+    {
+        id: 8,
+        name: '糖醋排骨',
+        image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=糖醋排骨%2C色泽红亮%2C酸甜可口%2C外酥里嫩%2C撒上白芝麻%2C高清美食摄影&image_size=square_hd',
+        category: 'sucai',
+        categoryName: '苏菜',
+        difficulty: '中等',
+        time: '60分钟',
+        author: '淮扬菜大师',
+        authorAvatar: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=淮扬菜厨师头像%2C专业%2C微笑%2C高清头像&image_size=square_hd',
+        likes: 3456,
+        views: 23456,
+        collections: 1567,
+        tags: ['家常菜', '下饭菜', '肉类'],
+        ingredients: ['排骨 500g', '生抽 2勺', '老抽 1勺', '醋 3勺', '白糖 4勺', '料酒 2勺', '姜片 5片', '葱段 适量'],
+        steps: [
+            { step: 1, desc: '排骨剁成小块，冷水下锅焯水，去除血沫后捞出洗净。', image: '' },
+            { step: 2, desc: '锅中放油，油温七成热放入排骨炸至金黄捞出。', image: '' },
+            { step: 3, desc: '锅中留少许油，放入姜片、葱段炒香。', image: '' },
+            { step: 4, desc: '放入炸好的排骨，加入料酒、生抽、老抽翻炒均匀。', image: '' },
+            { step: 5, desc: '加入醋、白糖和没过排骨的清水，大火烧开后转小火炖30分钟。', image: '' },
+            { step: 6, desc: '最后大火收汁，汤汁浓稠裹在排骨上即可。', image: '' }
+        ],
+        tips: '糖醋比例很重要，一般是醋:白糖=3:4。炸排骨可以让外酥里嫩，不炸也可以直接炖。',
+        isHot: true,
+        isRecommend: false
+    },
+    {
+        id: 9,
+        name: '蛋挞',
+        image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=葡式蛋挞%2C外皮酥脆%2C内馅嫩滑%2C表面焦糖色%2C刚出炉%2C高清美食摄影&image_size=square_hd',
+        category: 'tiandian',
+        categoryName: '甜点',
+        difficulty: '简单',
+        time: '40分钟',
+        author: '甜点师',
+        authorAvatar: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=甜点师头像%2C专业%2C微笑%2C高清头像&image_size=square_hd',
+        likes: 4567,
+        views: 32145,
+        collections: 2890,
+        tags: ['甜点', '烘焙', '简单'],
+        ingredients: ['蛋挞皮 12个', '牛奶 150ml', '淡奶油 100ml', '蛋黄 3个', '白糖 40g', '炼乳 1勺'],
+        steps: [
+            { step: 1, desc: '蛋挞皮提前从冰箱取出解冻。', image: '' },
+            { step: 2, desc: '牛奶中加入白糖，小火加热至白糖融化，放凉备用。', image: '' },
+            { step: 3, desc: '蛋黄打散，加入放凉的牛奶液中搅拌均匀。', image: '' },
+            { step: 4, desc: '加入淡奶油和炼乳，搅拌均匀后过筛2次。', image: '' },
+            { step: 5, desc: '将蛋挞液倒入解冻好的蛋挞皮中，约8分满。', image: '' },
+            { step: 6, desc: '烤箱预热220度，放入中层烤20分钟至表面出现焦糖色即可。', image: '' }
+        ],
+        tips: '蛋挞液过筛可以让口感更细腻。烤制时间根据烤箱脾气调整，表面出现焦斑就可以了。',
+        isHot: true,
+        isRecommend: true
+    },
+    {
+        id: 10,
+        name: '紫菜蛋花汤',
+        image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=紫菜蛋花汤%2C汤色清澈%2C蛋花细腻%2C撒上葱花%2C清淡鲜美%2C高清美食摄影&image_size=square_hd',
+        category: 'tanglei',
+        categoryName: '汤类',
+        difficulty: '简单',
+        time: '10分钟',
+        author: '家常小厨',
+        authorAvatar: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=家常小厨头像%2C亲切%2C微笑%2C高清头像&image_size=square_hd',
+        likes: 2345,
+        views: 18765,
+        collections: 1234,
+        tags: ['汤类', '快手菜', '清淡'],
+        ingredients: ['紫菜 10g', '鸡蛋 2个', '葱花 适量', '盐 适量', '胡椒粉 少许', '香油 少许'],
+        steps: [
+            { step: 1, desc: '紫菜用清水泡软，洗净泥沙。', image: '' },
+            { step: 2, desc: '鸡蛋打散备用。', image: '' },
+            { step: 3, desc: '锅中放水烧开，放入紫菜煮2分钟。', image: '' },
+            { step: 4, desc: '加入盐、胡椒粉调味。', image: '' },
+            { step: 5, desc: '关火，将蛋液缓缓倒入锅中，边倒边用筷子轻轻搅动。', image: '' },
+            { step: 6, desc: '撒上葱花，淋上香油即可。', image: '' }
+        ],
+        tips: '蛋液要关火后再倒，用余温烫熟蛋花才会嫩滑。紫菜要提前泡软洗净，去除泥沙。',
+        isHot: false,
+        isRecommend: true
+    }
+]
+
+// 用户信息数据
+export const userInfo = {
+    id: 1,
+    nickname: '美食爱好者',
+    avatar: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=可爱卡通头像%2C厨师%2C美食爱好者%2C微笑%2C高清头像&image_size=square_hd',
+    phone: '138****8888',
+    level: '美食达人',
+    levelIcon: '👨‍🍳',
+    points: 2580,
+    following: 128,
+    followers: 1024,
+    likes: 5678,
+    collections: 128,
+    signInDays: 15,
+    isVip: true
+}
+
+// 我的页面菜单列表
+export const mineMenuList = [
+    {
+        id: 1,
+        icon: '❤️',
+        title: '我的收藏',
+        desc: '查看收藏的菜谱',
+        path: '',
+        badge: 128
+    },
+    {
+        id: 2,
+        icon: '📝',
+        title: '浏览历史',
+        desc: '查看浏览记录',
+        path: '',
+        badge: 0
+    },
+    {
+        id: 3,
+        icon: '🍳',
+        title: '我的作品',
+        desc: '发布的菜谱作品',
+        path: '',
+        badge: 8
+    },
+    {
+        id: 4,
+        icon: '🎁',
+        title: '积分商城',
+        desc: '积分兑换好礼',
+        path: '',
+        badge: 0
+    },
+    {
+        id: 5,
+        icon: '⚙️',
+        title: '设置',
+        desc: '账号与偏好设置',
+        path: '',
+        badge: 0
+    },
+    {
+        id: 6,
+        icon: '❓',
+        title: '帮助与反馈',
+        desc: '常见问题与意见反馈',
+        path: '',
+        badge: 0
+    }
+]
+
+// 根据分类获取菜谱
+export function getRecipesByCategory(categoryKey) {
+    if (categoryKey === 'all') {
+        return recipeList
+    }
+    return recipeList.filter(item => item.category === categoryKey)
+}
+
+// 获取热门菜谱
+export function getHotRecipes() {
+    return recipeList.filter(item => item.isHot)
+}
+
+// 获取推荐菜谱
+export function getRecommendRecipes() {
+    return recipeList.filter(item => item.isRecommend)
+}
+
+// 根据id获取菜谱详情
+export function getRecipeById(id) {
+    return recipeList.find(item => item.id === id)
+}

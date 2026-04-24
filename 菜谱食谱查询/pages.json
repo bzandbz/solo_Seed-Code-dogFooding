@@ -1,0 +1,51 @@
+{
+    "pages": [
+        {
+            "path": "pages/home/home",
+            "style": {
+                "navigationBarTitleText": "首页",
+                "enablePullDownRefresh": true
+            }
+        },
+        {
+            "path": "pages/category/category",
+            "style": {
+                "navigationBarTitleText": "分类",
+                "enablePullDownRefresh": false
+            }
+        },
+        {
+            "path": "pages/mine/mine",
+            "style": {
+                "navigationBarTitleText": "我的",
+                "enablePullDownRefresh": false
+            }
+        }
+    ],
+    "globalStyle": {
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "菜谱食谱",
+        "navigationBarBackgroundColor": "#FF6B6B",
+        "backgroundColor": "#F8F8F8"
+    },
+    "tabBar": {
+        "color": "#999999",
+        "selectedColor": "#FF6B6B",
+        "backgroundColor": "#FFFFFF",
+        "borderStyle": "black",
+        "list": [
+            {
+                "pagePath": "pages/home/home",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/category/category",
+                "text": "分类"
+            },
+            {
+                "pagePath": "pages/mine/mine",
+                "text": "我的"
+            }
+        ]
+    }
+}
